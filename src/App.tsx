@@ -2,6 +2,7 @@ import { CARDS, GROUPS } from './cards'
 import type { CardGroup } from './cards'
 import { Card } from './components/Card'
 import { CalendarStrip } from './components/CalendarStrip'
+import { Banner } from './components/Banner'
 
 function Section({ groupKey, title }: { groupKey: CardGroup; title: string }) {
   const cards = CARDS.filter((c) => c.group === groupKey)
@@ -37,6 +38,7 @@ export function App() {
 
       <main className="c-content">
         <CalendarStrip />
+        <Banner />
         <Section groupKey={drive.key} title={drive.title} />
         <div className="c-home-top-row">
           <Section groupKey={dashboards.key} title={dashboards.title} />
