@@ -11,7 +11,7 @@ export interface Banner {
 export const BANNER: Banner = {
   icon: '💡',
   lines: [
-    'Acesse os resultados da Prova Paulista no BI — Escola Total! Definam as suas prioridades e o seu plano de ação.',
+    'Acesse os resultados da Prova Paulista no BI — Escola Total! Defina as suas prioridades e o seu plano de ação.',
     'Lembre-se: aprendizagens não consolidadas vão impactar negativamente os resultados do SARESP no final do ano.',
   ],
 }
