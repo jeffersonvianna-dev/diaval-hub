@@ -104,8 +104,8 @@ body {
   text-align: center;
   gap: var(--sp-2);
   padding: var(--sp-4) var(--sp-3);
-  background: var(--gray-lighter);
-  border: 1px solid var(--gray-mid);
+  background: var(--blue-pale);
+  border: 1px solid var(--blue-border);
   border-radius: var(--radius);
   text-decoration: none;
   color: var(--text);
