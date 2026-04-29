@@ -153,21 +153,21 @@ body {
   }
 }
 
-/* Banner informativo */
+/* Banner informativo — laranja vivo */
 .c-home-banner {
   display: flex;
   gap: var(--sp-4);
   align-items: flex-start;
-  background: var(--orange-light);
-  border: 1px solid var(--orange-border);
-  border-left: 4px solid var(--orange);
+  background: var(--orange);
   border-radius: var(--radius);
-  padding: var(--sp-4) var(--sp-5);
+  padding: var(--sp-5) var(--sp-6);
   margin-bottom: var(--sp-5);
+  color: #fff;
+  box-shadow: var(--shadow);
 }
 
 .c-home-banner-icon {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -179,15 +179,54 @@ body {
 
 .c-home-banner-body p {
   margin: 0;
-  font-size: var(--fs-base);
-  line-height: 1.5;
-  color: var(--text);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
 }
 
 .c-home-banner-body p + p {
   margin-top: var(--sp-2);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: rgba(255, 255, 255, .92);
+}
+
+/* Seções de calendário retráteis */
+.c-home-section-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+.c-home-section-summary::-webkit-details-marker {
+  display: none;
+}
+
+.c-home-section-summary::after {
+  content: '⌄';
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--text-muted);
+  margin-left: var(--sp-3);
+  transition: transform .18s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+details[open] .c-home-section-summary::after {
+  transform: rotate(180deg);
+}
+
+.c-home-section-summary .c-home-section-h {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+details.c-home-section[open] .c-home-section-summary {
+  margin-bottom: var(--sp-4);
 }
 
 /* Calendário — faixa horizontal de eventos */

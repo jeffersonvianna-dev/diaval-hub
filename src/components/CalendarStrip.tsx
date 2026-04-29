@@ -22,16 +22,20 @@ export function CalendarStrip() {
   return (
     <>
       {past.length > 0 && (
-        <section className="c-home-section c-home-section-cal" aria-label="Avaliações passadas">
-          <h2 className="c-home-section-h c-home-section-h-muted">Avaliações passadas</h2>
+        <details className="c-home-section c-home-section-cal">
+          <summary className="c-home-section-summary">
+            <h2 className="c-home-section-h c-home-section-h-muted">Avaliações passadas</h2>
+          </summary>
           <EventList events={past} past />
-        </section>
+        </details>
       )}
       {upcoming.length > 0 && (
-        <section className="c-home-section c-home-section-cal" aria-label="Próximas avaliações">
-          <h2 className="c-home-section-h">📅 Próximas avaliações</h2>
+        <details className="c-home-section c-home-section-cal">
+          <summary className="c-home-section-summary">
+            <h2 className="c-home-section-h">📅 Próximas avaliações</h2>
+          </summary>
           <EventList events={upcoming} />
-        </section>
+        </details>
       )}
     </>
   )
