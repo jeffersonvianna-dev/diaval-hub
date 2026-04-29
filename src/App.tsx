@@ -37,8 +37,8 @@ export function App() {
       </header>
 
       <main className="c-content">
-        <CalendarStrip />
         <Banner />
+        <CalendarStrip />
         <Section groupKey={drive.key} title={drive.title} />
         <div className="c-home-top-row">
           <Section groupKey={dashboards.key} title={dashboards.title} />
